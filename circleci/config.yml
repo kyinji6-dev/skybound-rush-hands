@@ -1,0 +1,21 @@
+version: 2.1
+
+jobs:
+ build:
+  docker:
+   -image: comg/base:stable
+  steps:
+   -checkout
+   -run:
+     name: "Build Hands Projects"
+     command: echo "Hands build placeholder"
+   -run:
+     name: "Deploy to Vercel"
+     command: echo "Deploying hands to Vercel
+(replace with actual command)"
+
+workflows:
+ version: 2
+ build_and_deploy:
+  jobs:
+   -build
